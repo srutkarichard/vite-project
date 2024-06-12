@@ -10,7 +10,7 @@ function Pokemon(id, url) {
 }
 var cardSrc
 function typeSort(props){
-  cardSrc = `src/assets/img/cardBackground/${props}.png`
+  cardSrc = `/img/cardBackground/${props}.png`
   return cardSrc
 }
 
@@ -41,7 +41,7 @@ function PokemonList({ pokemonStats, onClick }) {
       return (
         <div >
           <p className='pokemonName' style={{zIndex : indx}}><b>{pokemon.pokemonName}</b></p>
-          <img className='pokemonSprite' src={`src/assets/img/pokemonSprites/${pokemon.pokedexNumber}.png`} onClick={() => onClick(pokemon.pokedexNumber)} style={{zIndex : indx}}/>
+          <img className='pokemonSprite' src={`/img/pokemonSprites/${pokemon.pokedexNumber}.png`} onClick={() => onClick(pokemon.pokedexNumber)} style={{zIndex : indx}}/>
           <img className="pokemonKarty2" src={cardUrl} alt="nejde"  onClick={() => onClick(pokemon.pokedexNumber)} />
         </div>
       )
