@@ -72,11 +72,13 @@ function App() {
   const [listKaret, setListKaret] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [renderType, setRenderType] = useState('pokemonList');
+  const [currentPokemon, setCurrentPokemon] = useState(0)
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
   const getData = (props) => {
+    setCurrentPokemon(props)
     setRenderType('loading')                                                 
     axios.get("https://api.pokemontcg.io/v2/cards?q=nationalPokedexNumbers:"+ props+"&select=id,name,images,nationalPokedexNumbers")
     .then(response => {
@@ -100,7 +102,7 @@ function App() {
           <div>
             <div>
               <button className="floatingButton" onClick={() => {setRenderType('pokemonList'),PokemonList({pokemonStats})}} >X</button>
-              <List items={listKaret} fun={addToFav}></List>
+              <List items={listKaret} fun={addToFav} currentPokemon={currentPokemon}></List>
             </div>
           </div>
         )}
