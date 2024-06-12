@@ -1,0 +1,20 @@
+  [
+    {
+      "pokedexNumber": 1,
+      "pokemonName": "Bulbasaur",
+      "Type 1": "Grass",
+      "Type 2": "Poison"
+    },
+    {
+     "pokedexNumber": 2,
+      "pokemonName": "Ivysaur",
+      "Type 1": "Grass",
+      "Type 2": "Poison"
+    },
+    {
+      "pokedexNumber": 3,
+      "pokemonName": "Venusaur",
+      "Type 1": "Grass",
+      "Type 2": "Poison"
+  }
+]
